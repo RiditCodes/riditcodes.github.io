@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Glass Space</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="app-container">
+    <section class="glass-card">
+      
+      <header class="card-header">
+        <h1 class="card-title">Hello, World.</h1>
+        <p class="card-subtitle">Select a color & play some beats.</p>
+      </header>
+
+      <!-- Music Section -->
+      <section class="music-player">
+        <div class="track-display">
+          <span class="music-icon">🎵</span>
+          <span id="track-title" class="track-title">Loading track...</span>
+        </div>
+
+        <div class="player-controls">
+          <button id="prev-btn" class="btn" aria-label="Previous">⏮</button>
+          <button id="play-btn" class="btn play-btn" aria-label="Play/Pause">▶</button>
+          <button id="next-btn" class="btn" aria-label="Next">⏭</button>
+        </div>
+
+        <!-- Hidden Audio Element -->
+        <audio id="audio-player" preload="metadata"></audio>
+      </section>
+
+      <!-- Theme Customizer -->
+      <section class="theme-customizer">
+        <span class="theme-label">Accent Color</span>
+        
+        <div class="theme-controls">
+          <input type="color" id="color-picker" value="#38bdf8" />
+          <div class="swatches">
+            <button class="swatch" data-color="#38bdf8" style="background: #38bdf8;"></button>
+            <button class="swatch" data-color="#a855f7" style="background: #a855f7;"></button>
+            <button class="swatch" data-color="#22c55e" style="background: #22c55e;"></button>
+            <button class="swatch" data-color="#f43f5e" style="background: #f43f5e;"></button>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
